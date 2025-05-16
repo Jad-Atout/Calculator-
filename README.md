@@ -1,38 +1,42 @@
-# Tkinter Calculator
+# Learning Journey: Tkinter Calculator
 
-A simple GUI calculator built with Python’s Tkinter library.  
-Supports basic arithmetic operations (`+`, `-`, `×`, `÷`, `%`), decimal entry, delete, clear, and chained calculations.
-
----
-
-## Table of Contents
-
-1. [Features](#features)  
-2. [Quick Start](#quick-start)  
-3. [Architecture & Modules](#architecture--modules)  
-4. [Function Reference](#function-reference)  
-5. [Button Grid Layout](#button-grid-layout)  
-6. [License](#license)
-
----
+A simple GUI calculator built as part of a Python learning project. It demonstrates core Tkinter skills, basic arithmetic logic, and clean code organization.
 
 ## Features
 
-- **Basic Arithmetic**: Addition, subtraction, multiplication, division, and modulo.  
-- **Decimal Support**: Enter floating-point numbers with “.”.  
-- **Chained Calculations**: Continue operations on previous result.  
-- **Delete & Clear**:  
-  - **Del**: Remove last digit/operator.  
-  - **C**: Reset all input and state.  
-- **Keyboard-like Button Hover**: Buttons change color on hover for visual feedback.  
-
----
+* **Basic Operations**: +, -, ×, ÷, %
+* **Decimal Support**: Enter and calculate floating-point numbers
+* **Chained Calculations**: Continue computing on the previous result
+* **Delete & Clear**: Backspace last entry or reset everything
+* **Interactive UI**: Button hover effects for better UX
 
 ## Quick Start
 
-1. **Requirements**  
-   - Python 3.x  
-   - Tkinter (usually bundled with Python)  
-2. **Run**  
+1. Ensure Python 3.x is installed (Tkinter comes bundled).
+2. Run:
+
    ```bash
    python calculator.py
+   ```
+3. Click buttons or use the keyboard to input numbers and operators.
+
+## How It Works
+
+* **Input Handling**: `click()` captures button presses and updates display.
+* **Display**: A `Label` shows the current expression; an `Entry` shows the result.
+* **Calculation Engine**:
+
+  * `operate()` parses the input tokens into numbers and operators.
+  * `create_digit()` builds multi-digit and decimal numbers.
+  * `calculate()` performs the arithmetic and stores the result.
+* **State Management**: Uses simple global variables (`data`, `label_str`, `previous_value`) to track input and results.
+
+## Why I Built It
+
+This project was my hands‑on exploration of:
+
+* Tkinter’s widget layout and event binding
+* Parsing and evaluating expressions in Python
+* Structuring code into reusable functions and clear logic
+
+It was a valuable stepping stone in mastering GUI development with Python.
